@@ -1,0 +1,88 @@
+
+
+slots:
+  PERSON:
+    type: text
+    auto_fill: true
+  account_number:
+    type: unfeaturized
+    auto_fill: false
+  account_balance:
+    type: unfeaturized
+    auto_fill: false
+  tpin:
+    type: unfeaturized
+    auto_fill: false
+  amount:
+    type: unfeaturized
+    auto_fill: false
+
+entities:
+- account_number
+- account_balance
+- tpin
+- amount
+- PERSON
+
+intents:
+- greet
+- fine_ask
+- thanks
+- goodbye
+- fine_normal
+- check_balance
+- deposite_money
+- request_cheque_book
+- transfer_money
+- withdraw_money
+
+actions:
+- utter_default
+- utter_greet
+- utter_help
+- utter_reply
+- utter_anything_else
+- utter_goodbye
+- utter_check_balance
+- utter_deposite_money
+- utter_request_cheque_book
+- utter_transfer_money
+- utter_withdraw_money
+
+templates:
+  utter_default:
+    - text: I am not sure what you're aiming for. Let's try again
+    - text: I am sorry but I am not able to get you. Let's try again
+    - text: My appologies but I am not able to get you. Let's try again
+  utter_greet:
+    - text: Hey {PERSON}, how are you?
+    - text: Hello {PERSON}, How are you doing?
+  utter_help:
+    - text: Great{PERSON}. How can I help you?
+    - text: Great. Tell me How can I help you?
+  utter_reply:
+    - text: I'm doing great. Please let me know what I can do for you.
+    - text: I'm doing great. Tell me How can I help you today?
+  utter_anything_else:
+    - text: No worries. Is there anything else I can help you with?
+    - text: No worries. Let me know if there is anything else I can help you with
+  utter_goodbye:
+    - text: It was a pleasure to help you
+    - text: Hope it was helpful
+    - text: Bye and have a nice day
+    - text: Bbye and have a nice day
+  utter_check_balance:
+    - text: Your current balance is $$$$.
+    - text: Your have $$$$ in your account. 
+  utter_deposite_money:
+    - text: Your balance after deposite of $$$$ is $$$$. 
+    - text: Your balance is $$$$ after the deposite.     
+  utter_request_cheque_book:
+    - text: Thank you for your request. Your cheque book will be delivered at your registered address. 
+    - text: We will send your cheque book at your registered address.     
+  utter_transfer_money:
+    - text: An amount of $$$$ has been transferred to target_account. Your current balance is $$$$. 
+    - text: We have transferred $$$$ to target_account. Your current balance is $$$$.     
+  utter_withdraw_money:
+    - text: An amount of $$$$ will be delivered at your address by tomorrow. Please share your transaction pin to validate transaction.
+    - text: We are sending money your way. An amount of $$$$ will be delivered by tomorrow.

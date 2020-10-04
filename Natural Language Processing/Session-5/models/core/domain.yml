@@ -1,0 +1,95 @@
+actions:
+- utter_anything_else
+- utter_check_balance
+- utter_default
+- utter_deposite_money
+- utter_goodbye
+- utter_greet
+- utter_help
+- utter_reply
+- utter_request_cheque_book
+- utter_transfer_money
+- utter_withdraw_money
+config:
+  store_entities_as_slots: true
+entities:
+- account_balance
+- account_number
+- amount
+- tpin
+forms: []
+intents:
+- greet:
+    ignore_entities: []
+    use_entities: true
+- fine_ask:
+    ignore_entities: []
+    use_entities: true
+- thanks:
+    ignore_entities: []
+    use_entities: true
+- goodbye:
+    ignore_entities: []
+    use_entities: true
+- fine_normal:
+    ignore_entities: []
+    use_entities: true
+- check_balance:
+    ignore_entities: []
+    use_entities: true
+- deposite_money:
+    ignore_entities: []
+    use_entities: true
+- request_cheque_book:
+    ignore_entities: []
+    use_entities: true
+- transfer_money:
+    ignore_entities: []
+    use_entities: true
+- withdraw_money:
+    ignore_entities: []
+    use_entities: true
+slots: {}
+templates:
+  utter_anything_else:
+  - text: No worries. Is there anything else I can help you with?
+  - text: No worries. Let me know if there is anything else I can help you with
+  utter_check_balance:
+  - text: Your current balance is {account_balance}.
+  - text: Your have {account_balance} in your account.
+  utter_default:
+  - text: I am not sure what you're aiming for. Let's try again
+  - text: I am sorry but I am not able to get you. Let's try again
+  - text: My appologies but I am not able to get you. Let's try again
+  utter_deposite_money:
+  - text: Your balance after deposite of {amount} is {Account_Balance}.
+  - text: Your balance is {Account_Balance}.
+  utter_goodbye:
+  - text: It was a pleasure to help you
+  - text: Hope it was helpful
+  - text: Bye and have a nice day
+  - text: Bbye and have a nice day
+  utter_greet:
+  - text: Hey {PERSON}, how are you?
+  - text: Hello {PERSON}, How are you doing?
+  utter_help:
+  - text: Great{PERSON}. How can I help you?
+  - text: Great. Tell me How can I help you?
+  utter_reply:
+  - text: I'm doing great. Please let me know what I can do for you.
+  - text: I'm doing great. Tell me How can I help you today?
+  utter_request_cheque_book:
+  - text: Thank you for your request. Your cheque book will be delivered at {customer_address}
+      on {delivery_date}.
+  - text: We will send your cheque book at {customer_address} on {delivery_date}.
+  utter_transfer_money:
+  - text: An amount of {amount} has been transferred to {target_account}. Your current
+      balance is {account_balance}.
+  - text: We have transferred {amount} to {target_account}. Your current balance is
+      {account_balance}.
+  utter_withdraw_money:
+  - text: An amount of {amount} will be delivered at {customer_address} on {delivery_date}.
+      Please share following pin {withdraw_pin} to complete transaction.  Your balance
+      after withdrawal is {Account_Balance}.
+  - text: We are sending money your way. An amount of {amount} will be delivered at
+      {customer_address} on {delivery_date}.

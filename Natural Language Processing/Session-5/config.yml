@@ -1,0 +1,29 @@
+
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: en
+
+pipeline:
+- name: "SpacyNLP"                  # loads the spacy language model
+- name: "SpacyTokenizer"            # splits the sentence into tokens
+- name: "SpacyFeaturizer"           # transform the sentence into a vector representation
+- name: "SpacyEntityExtractor"
+- name: "SklearnIntentClassifier"   # uses the vector representation to classify using SVM
+- name: "CRFEntityExtractor"
+- name: "EntitySynonymMapper"       # trains the synonyms
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+
+policies:
+  - name: KerasPolicy
+    epochs: 100
+  - name: MemoizationPolicy
+    max_history: 5
+  - name: FallbackPolicy
+    fallback_action_name: 'utter_default'
+    nlu_threshold: 0.1
+    core_threshold: 0.2
+  - name: MappingPolicy
+  - name: FormPolicy
+

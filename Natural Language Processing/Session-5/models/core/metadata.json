@@ -1,0 +1,52 @@
+{
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": []
+    },
+    "utter_reply": {
+      "slots": []
+    },
+    "utter_withdraw_money": {
+      "slots": []
+    },
+    "utter_deposite_money": {
+      "slots": []
+    },
+    "utter_greet": {
+      "slots": []
+    },
+    "utter_help": {
+      "slots": []
+    },
+    "utter_check_balance": {
+      "slots": []
+    },
+    "utter_goodbye": {
+      "slots": []
+    },
+    "utter_anything_else": {
+      "slots": []
+    },
+    "utter_default": {
+      "slots": []
+    },
+    "utter_request_cheque_book": {
+      "slots": []
+    },
+    "utter_transfer_money": {
+      "slots": []
+    }
+  },
+  "python": "3.6.9",
+  "max_histories": [
+    null
+  ],
+  "ensemble_name": "rasa.core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "rasa.core.policies.fallback.FallbackPolicy"
+  ],
+  "trained_at": "20191214-115533",
+  "rasa": "1.5.3",
+  "tensorflow": "1.15.0",
+  "sklearn": "0.20.4"
+}

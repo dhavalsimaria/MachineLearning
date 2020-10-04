@@ -1,0 +1,1 @@
+{"dtype": "<U19", "py/object": "numpy.ndarray", "values": ["check_balance", "deposite_money", "fine_ask", "fine_normal", "goodbye", "greet", "request_cheque_book", "thanks", "transfer_money", "withdraw_money"]}
